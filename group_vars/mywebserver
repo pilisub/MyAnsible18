@@ -1,0 +1,5 @@
+[mywebserver:vars]
+mywebpackforubuntu: apache2
+mywebpackforredhat: httpd
+myjavapckonubuntu: openjdk-8-jre
+myjavapackonredhat: java-1.8.0-openjdk
