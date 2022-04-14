@@ -1,0 +1,22 @@
+--- 
+- hosts: mywebserver
+  become: yes
+  tasks: 
+  - include_tasks: myfile.yml
+  - name: i want to install webserver
+    apt:
+      name: apache2
+      state: present
+    notify: restartwebserver
+
+  - name: i want copy file into ansible nodes
+    template:
+         src: myindex.j2
+         dest: /var/www/html/index.html
+    notify: restartwebserver
+
+  handlers:
+  - name: restartwebserver
+    service:
+       name: apache2
+       state: restarted       
