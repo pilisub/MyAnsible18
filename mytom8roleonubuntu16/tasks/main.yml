@@ -1,2 +1,6 @@
 ---
 # tasks file for mytom8roleonubuntu16
+- include tasks: installjava.yml
+- include tasks: createtomcatuser.yml
+- include tasks: installtomcat.yml
+- include tasks: updatepermission.yml
