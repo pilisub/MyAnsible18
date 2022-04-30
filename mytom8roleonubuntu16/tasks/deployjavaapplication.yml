@@ -1,0 +1,6 @@
+---
+- name: i want to deloy java application
+  get_url:
+    url: https://pilibucket22feb.s3.us-east-2.amazonaws.com/pili22feb.txt
+    dest: /opt/tomcat/webapps/pili22feb.txt
+    force_basic_auth: yes
